@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 7000
 
 Mongoose
     .connect(process.env.MONGO_URI)

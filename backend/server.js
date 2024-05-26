@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 7000
 
-const uri = process.env.MONGODB_URI;
-Mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+Mongoose
+    .connect(process.env.MONGO_URI)
     .then(() => {
         app.listen(PORT, () => {
             console.log(`Server Running on port ${PORT}`)
